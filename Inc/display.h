@@ -39,13 +39,7 @@
 #define DIGIT_4_ON		LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_2)
 #define DIGIT_TIME_ON	LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_7)
 
-typedef struct
-{
-	uint8_t digit[4];
-	uint8_t digit_num;
-	uint8_t negative;
-	uint8_t resolution;
-}display_data_;
+
 
 void resetDigits(void);
 void setDigits(void);
@@ -53,15 +47,93 @@ void resetSegments(void);
 void setSegments(void);
 
 void setDecimalPoint(void);
-void setOne(void);
-void setTwo(void);
-void setThree(void);
-void setFour(void);
-void setFive(void);
-void setSix(void);
-void setSeven(void);
-void setEight(void);
-void setNine(void);
-void setZero(void);
 
-void displayNumber(double num);
+void displayChar(char* message);
+void decode(char character);
+void printChar(unsigned short message,int digit);
+
+void set_1(void);
+
+void set_2(void);
+
+void set_3(void);
+
+void set_4(void);
+
+void set_5(void);
+
+void set_6(void);
+
+void set_7(void);
+
+void set_8(void);
+
+void set_9(void);
+
+void set_0(void);
+
+void set_A(void);
+
+
+void set_a(void);
+
+void set_b(void);
+
+void set_C(void);
+
+void set_c(void);
+
+void set_d(void);
+
+void set_E(void);
+
+void set_F(void);
+
+void set_G(void);
+
+void set_H(void);
+
+void set_h(void);
+
+void set_I(void);
+
+
+void set_J(void);
+
+void set_K(void);
+
+void set_L(void);
+
+void set_M(void);
+
+void set_n(void);
+
+void set_O(void);
+
+void set_o(void);
+
+void set_P(void);
+
+void set_q(void);
+void set_r(void);
+
+void set_S(void);
+
+void set_t(void);
+
+void set_U(void);
+
+void set_u(void);
+
+void set_V(void);
+
+void set_W(void);
+
+void set_X(void);
+
+void set_y(void);
+
+void set_Z(void);
+
+
+

@@ -28,8 +28,9 @@ void SystemClock_Config(void);
 
 extern uint64_t disp_time;
 
+char string_to_display[5]= "MATU";
 uint64_t saved_time;
-double num_to_display = 10;
+double num_to_display = 6666;
 
 int main(void)
 {
@@ -53,8 +54,10 @@ int main(void)
 
   MX_TIM3_Init();
 
+
   while (1)
   {
+	  /*//tocit sa bude string
 	  if(disp_time > (saved_time + 100))
 	  {
 		  displayNumber(num_to_display);
@@ -65,7 +68,10 @@ int main(void)
 	  	  {
 	  		  num_to_display = 100;
 	  	  }
-	  }
+	  }*/
+
+
+	  displayChar(string_to_display);
   }
 
 }
