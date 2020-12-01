@@ -23,14 +23,15 @@
 #include "gpio.h"
 #include "tim.h"
 #include "display.h"
+#include <string.h>
 
 void SystemClock_Config(void);
 
 extern uint64_t disp_time;
-
-char string_to_display[5]= "MATU";
+//char string[]= "MARTINHORVATH92601";
+char string[]= "KRISTINAOKIENKOVA92618";
+char string_to_display[5]= "";
 uint64_t saved_time;
-double num_to_display = 6666;
 
 int main(void)
 {
@@ -54,24 +55,39 @@ int main(void)
 
   MX_TIM3_Init();
 
-
+  int shift=0;
+  int index=0;
   while (1)
   {
-	  /*//tocit sa bude string
-	  if(disp_time > (saved_time + 100))
+
+
+
+	  LL_mDelay(500);
+
+	  index=shift;
+	  for(int i = 0; i < 4; i++){
+
+		  if(index+i>=(strlen(string))){
+			  index=0-i;
+
+		  }
+
+
+		  string_to_display[i]=string[index+i];
+
+
+	  }
+
+	  if(shift<(strlen(string))){
+		  shift++;
+	  }
+	  else
 	  {
-		  displayNumber(num_to_display);
-	  	  num_to_display -= 0.10;
-	  	  saved_time = disp_time;
-
-	  	  if(num_to_display <= 0)
-	  	  {
-	  		  num_to_display = 100;
-	  	  }
-	  }*/
+		  shift=0;
+	  }
 
 
-	  displayChar(string_to_display);
+
   }
 
 }

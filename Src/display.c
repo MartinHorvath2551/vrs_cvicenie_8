@@ -2,7 +2,7 @@
  * display.c
  *
  *  Created on: Nov 23, 2020
- *      Author: Stancoj
+ *
  */
 
 #include "display.h"
